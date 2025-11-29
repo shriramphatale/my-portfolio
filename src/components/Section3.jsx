@@ -71,8 +71,12 @@ const Section3 = () => {
 
               </div>
             </div>
-            <button className="bg-green-400 hover:scale-105 hover:shadow-lg hover:shadow-green-500/40 transition-all duration-300 cursor-pointer text-black font-bold px-4 py-1 rounded-2xl
-            ">View Project</button>
+            <a
+              href='https://github.com/shriramphatale/my-portfolio'
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-400 hover:scale-105 hover:shadow-lg hover:shadow-green-500/40 transition-all duration-300 cursor-pointer text-black font-bold px-4 py-1 rounded-2xl
+            ">View Project</a>
           </div>
         </div>
 
