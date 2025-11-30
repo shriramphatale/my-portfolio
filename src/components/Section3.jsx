@@ -2,11 +2,11 @@ import { CookingPot, NotebookPen, Code } from 'lucide-react';
 
 const Section3 = () => {
   return (
-    <div id="Project" className='min-h-screen w-full bg-neutral-950 text-white flex flex-col py-5'>
-      <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-center pt-15">Projects <span className="text-red-500">.</span></h1>
+    <div id="Project" className='min-h-screen w-full bg-neutral-950 text-white flex flex-col py-5 overflow-hidden'>
+      <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-center pt-16">Projects <span className="text-red-500">.</span></h1>
       <div className="flex-1 w-full flex flex-wrap justify-center items-center gap-10 p-10 ">
         {/* Card 1 */}
-        <div className="h-80 w-80 border border-red-400 rounded-xl shadow-lg flex flex-col items-center justify-between transition-all duration-300 hover:scale-105 hover:shadow-red-500/40 hover:border-red-500">
+        <div className="min-h-80 w-80 border border-red-400 rounded-xl shadow-lg flex flex-col items-center justify-between transition-all duration-300 hover:scale-105 hover:shadow-red-500/40 hover:border-red-500">
           <div className='h-36 w-full flex justify-center items-center bg-red-500/10 rounded-t-xl'>
             <NotebookPen size={40} color='red' />
           </div>
@@ -31,7 +31,7 @@ const Section3 = () => {
         </div>
 
         {/* Card 2 */}
-        <div className="h-80 w-80 border border-red-400 rounded-xl shadow-lg flex flex-col items-center justify-between transition-all duration-300 hover:scale-105 hover:shadow-red-500/40 hover:border-red-500">
+        <div className="min-h-80 w-80 border border-red-400 rounded-xl shadow-lg flex flex-col items-center justify-between transition-all duration-300 hover:scale-105 hover:shadow-red-500/40 hover:border-red-500">
           <div className='h-36 w-full flex justify-center items-center bg-red-500/10 rounded-t-xl'>
             <CookingPot size={40} color='red' />
           </div>
@@ -55,7 +55,7 @@ const Section3 = () => {
         </div>
 
         {/* Card 3 */}
-        <div className="h-80 w-80 border border-red-400 rounded-xl shadow-lg flex flex-col items-center justify-between transition-all duration-300 hover:scale-105 hover:shadow-red-500/40 hover:border-red-500">
+        <div className="min-h-80 w-80 border border-red-400 rounded-xl shadow-lg flex flex-col items-center justify-between transition-all duration-300 hover:scale-105 hover:shadow-red-500/40 hover:border-red-500">
           <div className='h-36 w-full flex justify-center items-center bg-red-500/10 rounded-t-xl'>
             <Code size={40} color='red' />
           </div>
