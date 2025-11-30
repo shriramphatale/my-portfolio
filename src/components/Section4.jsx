@@ -24,7 +24,7 @@ const Section4 = () => {
               <p className='text-sm md:text-lg font-medium'>shriramphatale833@gmail.com</p>
             </a>
           </div>
-          <div className='flex items-center gap-2'>
+          <div className='flex items-center gap-2 pt-1'>
             <LocateFixed className='text-red-500' size={20} />
             <p className='text-sm md:text-lg font-medium'> BEED, MAHARASHTRA</p>
           </div>
