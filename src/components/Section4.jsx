@@ -1,4 +1,4 @@
-import { Mail, Twitter, Linkedin, Github } from 'lucide-react';
+import { Mail, Twitter, LocateFixed, Linkedin, Github } from 'lucide-react';
 const Section4 = () => {
   return (
     <div id='Contact' className='min-h-screen relative overflow-hidden w-full bg-neutral-900 text-white p-4 flex flex-col items-center gap-5'>
@@ -17,8 +17,17 @@ const Section4 = () => {
           Let’s Work Together
         </p>
         <div>
-          <p className='text-sm md:text-lg font-medium'>shriramphatale833@gmail.com</p>
-          <p className='text-sm md:text-lg font-medium'>BEED, MAHARASHTRA</p>
+          <div className='flex items-center gap-2'>
+            <Mail className='text-red-500' size={20} />
+            <a href="mailto:shriramphatale833@gmail.com?subject=Let%27s%20Work%20Together&body=Hi%20Shriram,"
+                >
+              <p className='text-sm md:text-lg font-medium'>shriramphatale833@gmail.com</p>
+            </a>
+          </div>
+          <div className='flex items-center gap-2'>
+            <LocateFixed className='text-red-500' size={20} />
+            <p className='text-sm md:text-lg font-medium'> BEED, MAHARASHTRA</p>
+          </div>
         </div>
       </div>
 
