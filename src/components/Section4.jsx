@@ -26,7 +26,7 @@ const Section4 = () => {
           </div>
           <div className='flex items-center gap-2 pt-1'>
             <LocateFixed className='text-red-500' size={20} />
-            <p className='text-sm md:text-lg font-medium'> BEED, MAHARASHTRA</p>
+            <p className='text-sm md:text-lg font-medium'> PUNE, MAHARASHTRA</p>
           </div>
         </div>
       </div>
