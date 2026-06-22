@@ -1,4 +1,4 @@
-import { CookingPot, messagesSquare, Code } from 'lucide-react';
+import { CookingPot, MessagesSquare, Code } from 'lucide-react';
 
 const Section3 = () => {
   return (
@@ -8,7 +8,7 @@ const Section3 = () => {
         {/* Card 1 */}
         <div className="min-h-80 w-80 border border-red-400 rounded-xl shadow-lg flex flex-col items-center justify-between transition-all duration-300 hover:scale-105 hover:shadow-red-500/40 hover:border-red-500">
           <div className='h-36 w-full flex justify-center items-center bg-red-500/10 rounded-t-xl'>
-            <messagesSquare size={40} color='red' />
+            <MessagesSquare size={40} color='red' />
           </div>
           <div className='flex flex-col justify-between py-4 items-center flex-1 w-full'>
             <div className='w-full flex flex-col items-center gap-1'>
