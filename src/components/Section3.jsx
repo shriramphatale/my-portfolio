@@ -12,13 +12,13 @@ const Section3 = () => {
           </div>
           <div className='flex flex-col justify-between py-4 items-center flex-1 w-full'>
             <div className='w-full flex flex-col items-center gap-1'>
-              <h1 className='text-2xl font-bold'>Let's Talk - Realtime chat app</h1>
+              <h1 className='text-2xl font-bold'>Let's Talk - Chat app</h1>
               <div className='flex gap-2 flex-wrap mt-2 px-1 justify-center pb-3'>
                 <span className='px-3 py-1 text-xs font-medium rounded-full bg-orange-500/10 text-orange-500 border border-orange-500/20'>React.js</span>
                 <span className='px-3 py-1 text-xs font-medium rounded-full bg-orange-500/10 text-orange-500 border border-orange-500/20'>Node.js</span>
                 <span className='px-3 py-1 text-xs font-medium rounded-full bg-orange-500/10 text-orange-500 border border-orange-500/20'>Express.js</span>
+                <span className='px-3 py-1 text-xs font-medium rounded-full bg-orange-500/10 text-orange-500 border border-orange-500/20'>Socket.IO</span>
                 <span className='px-3 py-1 text-xs font-medium rounded-full bg-orange-500/10 text-orange-500 border border-orange-500/20'>MongoDB</span>
-                <span className='px-3 py-1 text-xs font-medium rounded-full bg-orange-500/10 text-orange-500 border border-orange-500/20'>Tailwind</span>
               </div>
             </div>
             <a
