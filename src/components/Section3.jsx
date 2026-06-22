@@ -12,12 +12,12 @@ const Section3 = () => {
           </div>
           <div className='flex flex-col justify-between py-4 items-center flex-1 w-full'>
             <div className='w-full flex flex-col items-center gap-1'>
-              <h1 className='text-2xl font-bold'>Notes App</h1>
+              <h1 className='text-2xl font-bold'>Let's Talk - Realtime chat app</h1>
               <div className='flex gap-2 flex-wrap mt-2 px-1 justify-center pb-3'>
-                <span className='px-3 py-1 text-xs font-medium rounded-full bg-orange-500/10 text-orange-500 border border-orange-500/20'>HTML</span>
-                <span className='px-3 py-1 text-xs font-medium rounded-full bg-orange-500/10 text-orange-500 border border-orange-500/20'>CSS</span>
-                <span className='px-3 py-1 text-xs font-medium rounded-full bg-orange-500/10 text-orange-500 border border-orange-500/20'>JS</span>
-                <span className='px-3 py-1 text-xs font-medium rounded-full bg-orange-500/10 text-orange-500 border border-orange-500/20'>React</span>
+                <span className='px-3 py-1 text-xs font-medium rounded-full bg-orange-500/10 text-orange-500 border border-orange-500/20'>React.js</span>
+                <span className='px-3 py-1 text-xs font-medium rounded-full bg-orange-500/10 text-orange-500 border border-orange-500/20'>Node.js</span>
+                <span className='px-3 py-1 text-xs font-medium rounded-full bg-orange-500/10 text-orange-500 border border-orange-500/20'>Express.js</span>
+                <span className='px-3 py-1 text-xs font-medium rounded-full bg-orange-500/10 text-orange-500 border border-orange-500/20'>MongoDB</span>
                 <span className='px-3 py-1 text-xs font-medium rounded-full bg-orange-500/10 text-orange-500 border border-orange-500/20'>Tailwind</span>
               </div>
             </div>
@@ -46,7 +46,7 @@ const Section3 = () => {
               </div>
             </div>
             <a
-              href='https://github.com/shriramphatale/Yumify-App'
+              href='https://letstalk-3uch.onrender.com/'
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-400 hover:scale-105 hover:shadow-lg hover:shadow-green-500/40 transition-all duration-300 cursor-pointer text-black font-bold px-4 py-1 rounded-2xl
