@@ -67,14 +67,14 @@ export default function Contact() {
     {
       label: 'LINKEDIN PROFILE',
       value: 'linkedin.com/in/shriram-phatale',
-      href: 'https://linkedin.com',
+      href: 'https://linkedin.com/in/shriram-phatale',
       icon: Linkedin,
       isExternal: true,
     },
     {
       label: 'GITHUB PROFILE',
       value: 'github.com/shriramphatale',
-      href: 'https://github.com',
+      href: 'https://github.com/shriramphatale',
       icon: Github,
       isExternal: true,
     },
