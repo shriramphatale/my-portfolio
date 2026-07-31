@@ -1,52 +1,43 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-html,
-body {
-  width: 100%;
-  overflow-x: hidden !important;
-}
-
-* {
-  font-family: "Poppins", sans-serif;
-}
-
-.slideLeft {
-  animation: slideLeft 0.8s ease-out forwards;
-}
-
-@keyframes slideLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
+@layer utilities {
+  .writing-mode-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
   }
 }
 
-.background-clr{
-  background-image: linear-gradient(to right bottom, #000000, #0f0e0e, #191718, #211f21, #2a272a);
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #121212;
+  border-left: 2px solid #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #CCFF00;
+  border: 2px solid #000000;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
 }
 
-@keyframes glow {
-  0%, 100% {
-    box-shadow: 0 0 10px rgba(255,0,0,0.6);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(255,0,0,1);
-  }
+/* Hard Neo Brutalist Button active state */
+.brutalist-btn {
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.brutalist-btn:hover {
+  transform: translate(-3px, -3px);
+}
+.brutalist-btn:active {
+  transform: translate(0px, 0px);
 }
 
-@keyframes flow {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-.animate-flow {
-  animation: flow 2s linear infinite;
+/* Headline Ranchers style override for extra sharp leading */
+.font-ranchers {
+  font-family: 'Ranchers', cursive, sans-serif;
+  line-height: 0.85;
 }
