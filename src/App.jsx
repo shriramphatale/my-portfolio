@@ -15,7 +15,7 @@ export default function App() {
       <Navbar />
 
       {/* Industrial Structural Sidebar (Desktop vertical tabs) */}
-      <StructuralSidebar />
+      {/* <StructuralSidebar /> */}
 
       {/* Main Content Area — 6 Strict Sections */}
       <main className="2xl:pr-14">
