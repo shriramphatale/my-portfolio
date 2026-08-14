@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, ExternalLink, MessageSquare, Layout, Server } from 'lucide-react';
+import { Github, ExternalLink, MessageSquare, Layout, BoomBox } from 'lucide-react';
 
 export default function Projects() {
   const projectList = [
@@ -15,6 +15,15 @@ export default function Projects() {
     },
     {
       id: 'PROJ_02',
+      name: 'Highway Radio - Music Streaming Platform',
+      icon: BoomBox,
+      explanation: 'A minimal music experience that lets users discover and enjoy playlists inspired by the music played by Indian truck drivers on the highway.',
+      techStack: 'React.js • JavaScript • Tailwind CSS • HTML5 Audio',
+      github: 'https://github.com/shriramphatale/Highway-Radio',
+      live: 'https://highway-radio.vercel.app',
+    },
+    {
+      id: 'PROJ_03',
       name: 'Personal Portfolio Website',
       icon: Layout,
       explanation: 'Built a modern, responsive personal portfolio website showcasing projects, skills, and experience using React + Vite and custom Neo-Brutalist design principles.',
@@ -22,22 +31,13 @@ export default function Projects() {
       github: 'https://github.com/shriramphatale',
       live: '#hero',
     },
-    {
-      id: 'PROJ_03',
-      name: 'RESTful API & Auth Service',
-      icon: Server,
-      explanation: 'Designed a scalable backend service featuring CRUD operations, secure JWT authentication, session management, and database integrations.',
-      techStack: 'Node.js • Express.js • MongoDB • JWT • REST API',
-      github: 'https://github.com/shriramphatale',
-      live: 'https://github.com/shriramphatale',
-    },
   ];
 
   return (
     <section id="projects" className="scroll-mt-20 relative bg-white text-black border-b-8 border-black py-12 lg:py-16 px-4 sm:px-6 lg:px-12">
-      
+
       <div className="max-w-6xl mx-auto">
-        
+
         {/* Section Header */}
         <div className="flex items-center gap-4 mb-4">
           <div className="bg-black text-white font-mono text-xs font-bold px-3 py-1 uppercase border-2 border-black rotate-[1deg]">
