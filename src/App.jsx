@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import StructuralSidebar from './components/StructuralSidebar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
@@ -14,11 +13,8 @@ export default function App() {
       {/* Sticky Top Navigation */}
       <Navbar />
 
-      {/* Industrial Structural Sidebar (Desktop vertical tabs) */}
-      {/* <StructuralSidebar /> */}
-
-      {/* Main Content Area — 6 Strict Sections */}
-      <main className="2xl:pr-14">
+      {/* Main Content Area */}
+      <main>
         {/* Section 1: Hero */}
         <Hero />
 
@@ -36,9 +32,7 @@ export default function App() {
       </main>
 
       {/* Section 6: Footer */}
-      <div className="2xl:pr-14">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }

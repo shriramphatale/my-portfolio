@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .writing-mode-vertical {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-  }
-}
-
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
