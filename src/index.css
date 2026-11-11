@@ -1,0 +1,362 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'OCR A Tribute';
+  src: url('/fonts/OCR-A-Tribute-W01-Regular.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: 'OCR A Tribute', monospace, sans-serif;
+  --font-mono: 'OCR A Tribute', monospace, ui-monospace;
+  --default-font-family: 'OCR A Tribute', monospace, sans-serif;
+  --default-mono-font-family: 'OCR A Tribute', monospace, ui-monospace;
+}
+
+@layer base {
+  :root,
+  html.dark {
+    --bg-page: #090909;
+    --border-subtle: #242426;
+    --border-card: #202023;
+    --border-hover: #323236;
+    --text-primary: #f4f4f5;
+    --text-secondary: #a1a1aa;
+    --text-muted: #71717a;
+    --accent-blue: #38bdf8;
+    --accent-emerald: #10b981;
+  }
+
+  html.light {
+    --bg-page: #f4f4f5;
+    --border-subtle: #e4e4e7;
+    --border-card: #e4e4e7;
+    --border-hover: #d4d4d8;
+    --text-primary: #09090b;
+    --text-secondary: #52525b;
+    --text-muted: #71717a;
+    --accent-blue: #0284c7;
+    --accent-emerald: #059669;
+  }
+
+  *, ::before, ::after {
+    font-family: 'OCR A Tribute', monospace, sans-serif;
+  }
+
+  /* Global smooth transition between themes */
+  html,
+  body,
+  header,
+  nav,
+  main,
+  section,
+  footer,
+  div,
+  p,
+  span,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  button,
+  a,
+  input {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-duration: 250ms;
+    transition-timing-function: ease-out;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'OCR A Tribute', monospace, sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    overflow-x: hidden;
+  }
+
+  body {
+    font-family: 'OCR A Tribute', monospace, sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    margin: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, code, pre, .font-mono, .font-sans {
+    font-family: 'OCR A Tribute', monospace, sans-serif;
+  }
+}
+
+/* Diagonal hatched drafting stripe pattern - matching reference image */
+.bg-diagonal-hatch {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.04) 0,
+    rgba(255, 255, 255, 0.04) 1px,
+    transparent 0,
+    transparent 8px
+  );
+}
+
+.bg-diagonal-hatch-subtle {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.02) 0,
+    rgba(255, 255, 255, 0.02) 1px,
+    transparent 0,
+    transparent 10px
+  );
+}
+
+/* =========================================================================
+   LIGHT MODE THEME OVERRIDES
+   ========================================================================= */
+html.light {
+  background-color: #f4f4f5 !important;
+  color: #09090b !important;
+}
+
+html.light body {
+  background-color: #f4f4f5 !important;
+  color: #09090b !important;
+}
+
+html.light .min-h-screen {
+  background-color: #f4f4f5 !important;
+  color: #09090b !important;
+}
+
+/* Main column background */
+html.light .max-w-\[900px\] {
+  background-color: #ffffff !important;
+}
+
+/* Navigation bar in light mode */
+html.light nav {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-color: #e4e4e7 !important;
+}
+
+html.light nav > div.max-w-\[900px\] {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-color: #e4e4e7 !important;
+}
+
+/* Border overrides */
+html.light .border-\[\#242426\],
+html.light .border-\[\#222226\],
+html.light .border-\[\#26262a\],
+html.light .border-\[\#27272a\] {
+  border-color: #e4e4e7 !important;
+}
+
+html.light .border-\[\#323236\],
+html.light .border-\[\#323238\],
+html.light .border-\[\#333338\],
+html.light .border-\[\#3f3f46\] {
+  border-color: #d4d4d8 !important;
+}
+
+html.light .border-zinc-800,
+html.light .border-zinc-700,
+html.light .border-zinc-800\/80 {
+  border-color: #e4e4e7 !important;
+}
+
+html.light .border-sky-950\/60 {
+  border-color: #bae6fd !important;
+}
+
+/* Background overrides */
+html.light .bg-\[\#090909\] {
+  background-color: #ffffff !important;
+}
+
+html.light .bg-\[\#090909\]\/95 {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+}
+
+html.light .bg-\[\#0c0c0e\],
+html.light .bg-\[\#0d0d0f\],
+html.light .bg-\[\#0e0e11\],
+html.light .bg-\[\#0f0f11\],
+html.light .bg-\[\#111114\],
+html.light .bg-\[\#121215\],
+html.light .bg-\[\#141416\],
+html.light .bg-\[\#141417\],
+html.light .bg-\[\#141418\],
+html.light .bg-\[\#16161a\] {
+  background-color: #f4f4f5 !important;
+}
+
+html.light .bg-\[\#12161f\] {
+  background-color: #f0f9ff !important;
+}
+
+html.light .bg-zinc-900 {
+  background-color: #f4f4f5 !important;
+}
+
+html.light .bg-zinc-800,
+html.light .bg-zinc-800\/60,
+html.light .bg-zinc-800\/80,
+html.light .bg-zinc-800\/40,
+html.light .bg-zinc-800\/30 {
+  background-color: #e4e4e7 !important;
+  color: #09090b !important;
+}
+
+/* Button with inverted high-contrast */
+html.light .bg-white.text-black {
+  background-color: #09090b !important;
+  color: #ffffff !important;
+}
+
+html.light .bg-white.text-black:hover {
+  background-color: #27272a !important;
+}
+
+/* Text overrides */
+html.light .text-\[\#f4f4f5\],
+html.light .text-\[\#fafafa\],
+html.light .text-white {
+  color: #09090b !important;
+}
+
+html.light .text-\[\#e4e4e7\],
+html.light .text-\[\#d4d4d8\],
+html.light .text-zinc-100,
+html.light .text-zinc-200 {
+  color: #18181b !important;
+}
+
+html.light .text-\[\#8e8e93\],
+html.light .text-\[\#828288\],
+html.light .text-zinc-300 {
+  color: #27272a !important;
+}
+
+html.light .text-\[\#a1a1aa\],
+html.light .text-zinc-400 {
+  color: #52525b !important;
+}
+
+html.light .text-zinc-500,
+html.light .text-\[\#71717a\],
+html.light .text-\[\#52525b\] {
+  color: #71717a !important;
+}
+
+/* Badges in light mode */
+html.light .bg-sky-950\/40 {
+  background-color: #f0f9ff !important;
+  border-color: #bae6fd !important;
+  color: #0284c7 !important;
+}
+
+html.light .bg-emerald-950\/30,
+html.light .bg-emerald-950\/40 {
+  background-color: #ecfdf5 !important;
+  border-color: #a7f3d0 !important;
+  color: #047857 !important;
+}
+
+/* CAD hatching on light drawing paper */
+html.light .bg-diagonal-hatch {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(0, 0, 0, 0.05) 0,
+    rgba(0, 0, 0, 0.05) 1px,
+    transparent 0,
+    transparent 8px
+  ) !important;
+}
+
+html.light .bg-diagonal-hatch-subtle {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(0, 0, 0, 0.035) 0,
+    rgba(0, 0, 0, 0.035) 1px,
+    transparent 0,
+    transparent 10px
+  ) !important;
+  opacity: 0.6 !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090909;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #242426;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+html.light ::-webkit-scrollbar-track {
+  background: #f4f4f5;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+}
+
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #a1a1aa;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Horizontal scroll without visible scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* GitHub Activity Tooltip Styling */
+.react-activity-calendar__tooltip {
+  background-color: #141416 !important;
+  color: #f4f4f5 !important;
+  border: 1px solid #27272a !important;
+  border-radius: 6px !important;
+  font-family: 'OCR A Tribute', monospace !important;
+  font-size: 11px !important;
+  padding: 4px 8px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6) !important;
+}
+
+.react-activity-calendar__tooltip-arrow {
+  fill: #141416 !important;
+}
+
+.profile-pic {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  image-rendering: auto;
+}
