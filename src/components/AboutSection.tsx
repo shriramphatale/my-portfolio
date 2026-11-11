@@ -1,17 +1,9 @@
 import React from 'react';
 import { portfolioConfig } from '../config/portfolio';
-import { SectionHeading } from './SectionHeading';
-import { ArrowDownRight, Layers, Bot, Database, ShieldCheck, Mail, ArrowRight } from 'lucide-react';
+import { Mail, ArrowRight } from 'lucide-react';
 
 export const AboutSection: React.FC = () => {
-  const { about, personal } = portfolioConfig;
-
-  const pillarIcons = [
-    <Layers key="1" className="w-4 h-4 text-zinc-400" />,
-    <Bot key="2" className="w-4 h-4 text-zinc-400" />,
-    <Database key="3" className="w-4 h-4 text-zinc-400" />,
-    <ShieldCheck key="4" className="w-4 h-4 text-zinc-400" />,
-  ];
+  const { personal } = portfolioConfig;
 
   return (
     <section id="about" className="w-full">

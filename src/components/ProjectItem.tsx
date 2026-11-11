@@ -1,6 +1,5 @@
 import React from 'react';
 import type { ProjectItemType } from '../config/portfolio';
-import { AskDocLiveDemo } from './AskDocLiveDemo';
 import { ExternalLink, ArrowUpRight } from 'lucide-react';
 import { GithubIcon } from './icons';
 

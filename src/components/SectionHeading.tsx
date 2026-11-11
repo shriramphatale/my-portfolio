@@ -11,7 +11,6 @@ interface SectionHeadingProps {
 export const SectionHeading: React.FC<SectionHeadingProps> = ({
   number,
   title,
-  subtitle,
   badge,
   id,
 }) => {
