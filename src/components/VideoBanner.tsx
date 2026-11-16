@@ -7,9 +7,11 @@ export const VideoBanner: React.FC = () => {
 
   return (
     <div
-      className="relative w-full max-w-[900px] mx-auto border-x border-[#242426] overflow-hidden !bg-[#06070f] select-none"
+      className="relative mx-auto w-full max-w-[900px]
+             h-[180px] sm:h-[240px] md:h-[320px] lg:h-auto
+             border-x border-[#242426] overflow-hidden !bg-[#06070f] select-none"
       style={{
-        height: `${videoBanner.heightDesktop}px`,
+        height: `clamp(180px, 35vw, ${videoBanner.heightDesktop}px)`,
       }}
     >
       {/* Hand-built Harbour Neon Skyline Scene */}
