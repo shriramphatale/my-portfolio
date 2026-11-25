@@ -53,7 +53,7 @@ export function App() {
         <ProjectsSection />
 
         {/* Subtle Horizontal Divider */}
-        <GridDivider />
+        <GridDivider withHatch hatchHeight="h-3" />
 
         {/* Section 04: Technologies & Skills */}
         <SkillsSection />
