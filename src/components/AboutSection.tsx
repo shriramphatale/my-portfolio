@@ -1,9 +1,68 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { portfolioConfig } from '../config/portfolio';
-import { Mail, ArrowRight } from 'lucide-react';
+import { GithubIcon, type GithubIconHandle } from './ui/github';
+import { LinkedinIcon, type LinkedinIconHandle } from './ui/linkedin';
+import { FileTextIcon, type FileTextIconHandle } from './ui/file-text';
+
+type AnimatedIconHandle = GithubIconHandle | LinkedinIconHandle | FileTextIconHandle;
+
+interface HeroSocialLinkProps {
+  href: string;
+  label: string;
+  title: string;
+  Icon: React.ForwardRefExoticComponent<
+    { size?: number; className?: string } & React.RefAttributes<AnimatedIconHandle>
+  >;
+}
+
+const HeroSocialLink: React.FC<HeroSocialLinkProps> = ({ href, label, title, Icon }) => {
+  const iconRef = useRef<AnimatedIconHandle>(null);
+
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={label}
+      title={title}
+      onMouseEnter={() => iconRef.current?.startAnimation()}
+      onMouseLeave={() => iconRef.current?.stopAnimation()}
+      onFocus={() => iconRef.current?.startAnimation()}
+      onBlur={() => iconRef.current?.stopAnimation()}
+      className="inline-flex items-center justify-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] focus-visible:text-[var(--text-primary)] focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-zinc-500 transition-colors"
+    >
+      <Icon ref={iconRef} size={20} />
+    </a>
+  );
+};
 
 export const AboutSection: React.FC = () => {
   const { personal } = portfolioConfig;
+
+  const socialLinks: HeroSocialLinkProps[] = [
+    {
+      href: personal.githubUrl,
+      label: 'GitHub profile',
+      title: 'GitHub',
+      Icon: GithubIcon as HeroSocialLinkProps['Icon'],
+    },
+    {
+      href: personal.linkedinUrl,
+      label: 'LinkedIn profile',
+      title: 'LinkedIn',
+      Icon: LinkedinIcon as HeroSocialLinkProps['Icon'],
+    },
+    ...(personal.resumeUrl
+      ? [
+          {
+            href: personal.resumeUrl,
+            label: 'View Resume PDF',
+            title: 'Resume',
+            Icon: FileTextIcon as HeroSocialLinkProps['Icon'],
+          },
+        ]
+      : []),
+  ];
 
   return (
     <section id="about" className="w-full">
@@ -23,54 +82,11 @@ export const AboutSection: React.FC = () => {
           ))} */}
         </div>
 
-        {/* Core Technical Pillars / Areas of Interest */}
-        {/* <div className="pt-2">
-          <div className="text-xs font-mono uppercase tracking-wider text-[#71717a] mb-4 flex items-center gap-2">
-            <ArrowDownRight className="w-3.5 h-3.5" />
-            Core Focus & Capabilities
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {about.corePillars.map((pillar, idx) => (
-              <div
-                key={pillar.title}
-                className="p-4 rounded-lg border border-[#242426] bg-[#0f0f11] hover:border-[#333338] transition-colors flex flex-col justify-between group"
-              >
-                <div>
-                  <div className="flex items-center gap-2.5 mb-2">
-                    <div className="p-1.5 rounded bg-zinc-900 border border-zinc-800 text-zinc-300 group-hover:text-white transition-colors">
-                      {pillarIcons[idx % pillarIcons.length]}
-                    </div>
-                    <h3 className="text-sm font-medium text-[#f4f4f5] group-hover:text-white">
-                      {pillar.title}
-                    </h3>
-                  </div>
-                  <p className="text-xs text-[#a1a1aa] leading-relaxed">
-                    {pillar.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div> */}
-
-        {/* Direct Action Link */}
-        <div className="pt-2 flex flex-wrap items-center gap-4">
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 px-4 py-2 text-xs font-medium rounded-md bg-white text-black hover:bg-zinc-200 transition-colors"
-          >
-            <Mail className="w-3.5 h-3.5" />
-            <span>Get in touch</span>
-          </a>
-
-          <a
-            href="#askdoc-ai"
-            className="inline-flex items-center gap-2 px-4 py-2 text-xs font-medium rounded-md border border-[#27272a] bg-[#141416] text-[#d4d4d8] hover:text-white hover:border-[#3f3f46] transition-colors"
-          >
-            <span>Explore AskDoc.ai project</span>
-            <ArrowRight className="w-3.5 h-3.5 text-zinc-400" />
-          </a>
+        {/* Minimal Social & Resume Icon Row */}
+        <div className="flex items-center gap-5">
+          {socialLinks.map((link) => (
+            <HeroSocialLink key={link.title} {...link} />
+          ))}
         </div>
       </div>
     </section>

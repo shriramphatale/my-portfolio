@@ -95,7 +95,7 @@ export const portfolioConfig: PortfolioConfig = {
     email: "shriramphatale@gmail.com",
     githubUrl: "https://github.com/shriramphatale",
     linkedinUrl: "https://linkedin.com/in/shriram-phatale",
-    resumeUrl: "#contact",
+    resumeUrl: "/resume.pdf",
   },
   videoBanner: {
     src: "/videos/portfolio-banner.mp4",
