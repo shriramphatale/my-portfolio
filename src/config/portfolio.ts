@@ -216,18 +216,17 @@ export const portfolioConfig: PortfolioConfig = {
       technologies: [
         "React",
         "TypeScript",
+        "Zustand",
         "Node.js",
         "Express",
         "MongoDB",
         "Redis",
         "BullMQ",
         "LangChain",
-        "Vector Search",
-        "RAG",
-        "Generative AI",
+        "Qdrant"
       ],
       githubUrl: "https://github.com/shriramphatale/askdoc-ai",
-      demoUrl: "https://askdoc.ai",
+      demoUrl: "https://github.com/shriramphatale/askdoc-ai",
     },
     {
       id: "letsTalk",
@@ -242,7 +241,7 @@ export const portfolioConfig: PortfolioConfig = {
         "Dead-letter queues and automated alerting mechanisms",
         "Memory-efficient stream processing with Redis cache",
       ],
-      technologies: ["React", "Node.js", "Express", "Socket.IO", "Zustand" ],
+      technologies: ["React","JavaScript","Zustand", "Node.js", "Express", "Socket.IO", "MongoDB" ],
       githubUrl: "https://github.com/shriramphatale/letstalk",
       demoUrl: 'https://letstalk-3uch.onrender.com/'
     },
