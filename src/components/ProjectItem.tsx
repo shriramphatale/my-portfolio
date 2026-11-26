@@ -1,6 +1,7 @@
 import React from 'react';
 import type { ProjectItemType } from '../config/portfolio';
 import { MoveUpRight } from 'lucide-react';
+import { TechStackIcons } from './TechStackIcons';
 
 interface ProjectItemProps {
   project: ProjectItemType;
@@ -10,14 +11,14 @@ interface ProjectItemProps {
 export const ProjectItem: React.FC<ProjectItemProps> = ({ project, isLast = false }) => {
   const projectUrl = project.demoUrl || project.githubUrl;
 
-  const cardClassName = `group block max-w-[900px] mx-auto border-x border-[#242426] bg-[#090909] p-6 md:p-8 transition-colors duration-200 ${
+  const cardClassName = `group relative block max-w-[900px] mx-auto border-x border-[#242426] bg-[#090909] p-6 md:p-8 transition-colors duration-200 ${
     projectUrl
-      ? 'hover:bg-[#0e0e11] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-inset focus-visible:ring-[#3f3f46] cursor-pointer'
+      ? 'hover:bg-[#0e0e11] has-[>a:focus-visible]:ring-1 has-[>a:focus-visible]:ring-inset has-[>a:focus-visible]:ring-[#3f3f46] cursor-pointer'
       : ''
   }`;
 
   const cardContent = (
-    <div className="space-y-4">
+    <div className={`space-y-4 ${projectUrl ? 'relative z-10 pointer-events-none' : ''}`}>
       {/* Header: Title, Badge, Link Arrow */}
       <div className="flex items-center justify-between gap-3">
         <div className="flex items-center gap-3">
@@ -63,17 +64,8 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({ project, isLast = fals
       {/* Embedded Interactive Simulator for Primary Project (AskDoc.ai) */}
       {/* {project.isPrimary && <AskDocLiveDemo />} */}
 
-      {/* Technology Pill Badges */}
-      <div className="pt-2 flex flex-wrap gap-1.5">
-        {project.technologies.map((tech) => (
-          <span
-            key={tech}
-            className="px-2.5 py-1 text-[11px] font-mono rounded-full bg-[#141416] text-[#a1a1aa] border border-[#27272a] hover:border-zinc-600 hover:text-white transition-colors"
-          >
-            {tech}
-          </span>
-        ))}
-      </div>
+      {/* Technology Stack Icons */}
+      <TechStackIcons technologies={project.technologies} />
     </div>
   );
 
@@ -82,19 +74,18 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({ project, isLast = fals
       id={project.id}
       className={`w-full scroll-mt-20 ${!isLast ? 'border-b border-[#242426]' : ''}`}
     >
-      {projectUrl ? (
-        <a
-          href={projectUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={`${project.title} (opens in a new tab)`}
-          className={cardClassName}
-        >
-          {cardContent}
-        </a>
-      ) : (
-        <div className={cardClassName}>{cardContent}</div>
-      )}
+      <div className={cardClassName}>
+        {projectUrl && (
+          <a
+            href={projectUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${project.title} (opens in a new tab)`}
+            className="absolute inset-0 z-0 focus:outline-none"
+          />
+        )}
+        {cardContent}
+      </div>
     </div>
   );
 };
