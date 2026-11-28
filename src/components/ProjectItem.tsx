@@ -11,7 +11,7 @@ interface ProjectItemProps {
 export const ProjectItem: React.FC<ProjectItemProps> = ({ project, isLast = false }) => {
   const projectUrl = project.demoUrl || project.githubUrl;
 
-  const cardClassName = `group relative block max-w-[900px] mx-auto border-x border-[#242426] bg-[#090909] p-6 md:p-8 transition-colors duration-200 ${
+  const cardClassName = `group relative block max-w-[900px] mx-auto border-x border-[#242426] bg-[#090909] px-6 py-4 md:py-4 transition-colors duration-200 ${
     projectUrl
       ? 'hover:bg-[#0e0e11] has-[>a:focus-visible]:ring-1 has-[>a:focus-visible]:ring-inset has-[>a:focus-visible]:ring-[#3f3f46] cursor-pointer'
       : ''
@@ -22,7 +22,7 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({ project, isLast = fals
       {/* Header: Title, Badge, Link Arrow */}
       <div className="flex items-center justify-between gap-3">
         <div className="flex items-center gap-3">
-          <h3 className="text-xl md:text-2xl font-semibold text-white tracking-tight">
+          <h3 className="text-xl md:text-2xl text-white tracking-tight">
             {project.title}
           </h3>
           {project.badge && (
@@ -41,7 +41,7 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({ project, isLast = fals
       </div>
 
       {/* Tagline / Brief Description */}
-      <p className="text-sm md:text-base text-zinc-300 leading-relaxed font-normal">
+      <p className="text-[16px] md:text-[18px] text-zinc-300 leading-relaxed font-normal">
         {project.description}
       </p>
 

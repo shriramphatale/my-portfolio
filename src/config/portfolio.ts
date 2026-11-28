@@ -29,8 +29,8 @@ export interface ProjectItemType {
 }
 
 export interface SkillCategoryType {
+  number: string;
   category: string;
-  description: string;
   skills: string[];
 }
 
@@ -264,24 +264,54 @@ export const portfolioConfig: PortfolioConfig = {
   ],
   skills: [
     {
+      number: "01",
+      category: "Language",
+      skills: ["TypeScript", "JavaScript", "Python"],
+    },
+    {
+      number: "02",
       category: "Frontend",
-      description: "Modern web interfaces, design systems, and responsive applications",
-      skills: ["JavaScript", "TypeScript", "React", "HTML", "CSS", "Tailwind CSS", "Redux", "Zustand"],
+      skills: [
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "shadcn/ui",
+        "Radix UI",
+        "Base UI",
+        "Motion",
+        "Expo",
+        "TanStack",
+        "MobX-State-Tree",
+      ],
     },
     {
-      category: "Backend",
-      description: "Scalable server architectures, APIs, and service integrations",
-      skills: ["Node.js", "Express.js", "Websockets", "Socket.io","REST APIs"],
+      number: "03",
+      category: "Backend & Database",
+      skills: ["Node.js", "Bun", "PostgreSQL", "MongoDB", "Redis", "nginx"],
     },
     {
-      category: "Databases & Infrastructure",
-      description: "Data persistence, in-memory caching, message queues, and containers",
-      skills: ["MongoDB", "Redis", "Docker", "BullMQ", "Background Jobs"],
+      number: "04",
+      category: "Workflow & AI",
+      skills: [
+        "Claude",
+        "Cursor",
+        "Gemini",
+        "ChatGPT",
+        "Git",
+        "GitHub",
+        "Docker",
+        "Vercel",
+      ],
     },
     {
-      category: "AI & LLM Applications",
-      description: "Language models, semantic vector search, and intelligent agents",
-      skills: ["LangChain", "LLM APIs", "Embeddings", "Vector Databases", "RAG", "Prompt Engineering"],
+      number: "05",
+      category: "Analytics",
+      skills: ["OpenPanel", "PostHog"],
+    },
+    {
+      number: "06",
+      category: "Design",
+      skills: ["Figma", "Paper", "Photoshop"],
     },
   ],
   contact: {

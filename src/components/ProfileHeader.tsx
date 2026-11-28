@@ -43,7 +43,7 @@ export const ProfileHeader: React.FC = () => {
 
   return (
     <div className="w-full border-b border-[#242426]">
-      <div className="max-w-[900px] mx-auto border-x border-[#242426] bg-[#090909] py-7 px-6 md:px-8">
+      <div className="max-w-[900px] mx-auto border-x border-[#242426] bg-[#090909] py-5 px-6 md:px-8">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
           {/* Left side: Avatar + Name & Role */}
           <div className="flex items-center gap-5">
@@ -70,7 +70,7 @@ export const ProfileHeader: React.FC = () => {
 
             {/* Name & Role */}
             <div className="flex flex-col justify-center">
-              <h1 className="text-[22px] md:text-[22px] font-semibold text-white tracking-tight leading-snug">
+              <h1 className="text-[22px] md:text-[24px]  text-white tracking-tight leading-snug">
                 {personal.name}
               </h1>
               {/* <p className="text-[13px] md:text-[13px] text-[#a1a1aa] font-normal leading-normal">
@@ -102,14 +102,14 @@ export const ProfileHeader: React.FC = () => {
           <div className="flex flex-wrap sm:flex-col sm:items-end gap-2.5 sm:gap-1.5 text-xs text-[#a1a1aa]">
             {/* Current Time */}
             {currentTime && (
-              <div className="inline-flex items-center gap-1.5 text-[#828288] font-mono text-[11px]">
+              <div className="inline-flex items-center gap-1.5 text-[#828288] font-mono text-[12px]">
                 <Clock className="w-3 h-3 text-[#71717a]" />
                 <span>{currentTime} IST</span>
               </div>
             )}
 
             {/* Location */}
-            <div className="inline-flex items-center gap-1 text-[#828288] font-mono text-[11px]">
+            <div className="inline-flex items-center gap-1 text-[#828288] font-mono text-[14px]">
               <MapPin className="w-3 h-3 text-[#71717a]" />
               <span>{personal.location}, {personal.country}</span>
             </div>

@@ -68,7 +68,7 @@ export const AboutSection: React.FC = () => {
     <section id="about" className="w-full">
       {/* <SectionHeading number="01" title="About" /> */}
 
-      <div className="max-w-[900px] mx-auto border-x border-[#242426] bg-[#090909] p-6 md:p-8 space-y-8">
+      <div className="max-w-[900px] mx-auto border-x border-[#242426] bg-[#090909] px-6 py-4 md:py-4 space-y-5">
         {/* Main Editorial Statement */}
         <div className="space-y-4 max-w-2xl">
           <p className="text-lg md:text-xl text-[#f4f4f5] font-normal leading-relaxed">

@@ -51,26 +51,26 @@ export const GitHubActivity: React.FC = () => {
     <section id="github-activity" className="w-full">
       {/* Structural Section Header Bar (aligned with portfolio section headings) */}
       <div className="w-full border-b border-[#242426]">
-  <div className="max-w-[900px] mx-auto border-x border-[#242426] bg-[#090909] pt-5 pb-6 px-6 md:px-8">
-    <div className="flex flex-wrap items-baseline justify-between gap-4">
-      <div className="flex items-baseline gap-3">
-        {/* Uncomment the 2 spans below only if you want a section number like "04 —" */}
-        <span className="font-mono text-sm md:text-base text-[#71717a] font-medium tracking-tight">05</span>
-        <span className="text-zinc-600 font-light select-none">—</span>
-        <h2 className="text-2xl md:text-3xl font-semibold text-[#fafafa] tracking-tight">
-          GitHub Activity
-        </h2>
+        <div className="max-w-[900px] mx-auto border-x border-[#242426] bg-[#090909] pt-2 pb-2 px-6">
+          <div className="flex flex-wrap items-baseline justify-between gap-4">
+            <div className="flex items-baseline gap-3">
+              {/* Uncomment the 2 spans below only if you want a section number like "04 —" */}
+              {/* <span className="font-mono text-sm md:text-base text-[#71717a] font-medium tracking-tight">05</span>
+              <span className="text-zinc-600 font-light select-none">—</span> */}
+              <h2 className="text-2xl md:text-3xl text-[#fafafa] tracking-tight">
+                GitHub Activity
+              </h2>
+            </div>
+            <span className="text-xs md:text-sm text-zinc-400 font-mono">
+              {totalContributions.toLocaleString()} GitHub activities in the last year
+            </span>
+          </div>
+        </div>
       </div>
-      <span className="text-xs md:text-sm text-zinc-400 font-mono">
-        {totalContributions.toLocaleString()} GitHub activities in the last year
-      </span>
-    </div>
-  </div>
-</div>
 
       {/* Structural Content Grid (Sitting flush inside main vertical rails) */}
       <div className="w-full">
-        <div className="max-w-[900px] mx-auto border-x border-[#242426] bg-[#090909] p-6 md:p-8">
+        <div className="max-w-[900px] mx-auto border-x border-[#242426] bg-[#090909] p-6 py-4 ">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -128,7 +128,7 @@ export const GitHubActivity: React.FC = () => {
             </div>
 
             {/* Footer / Legend Row */}
-            <div className="flex items-center justify-between text-xs text-zinc-500 pt-4 border-t border-[#242426] font-mono">
+            <div className="flex items-center justify-between text-xs text-zinc-500 font-mono">
               <span>Less active</span>
               <div className="flex items-center gap-2">
                 <div className="flex items-center gap-1.5">
