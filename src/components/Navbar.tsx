@@ -78,9 +78,9 @@ export const Navbar: React.FC<NavbarProps> = () => {
                   <a
                     key={item.label}
                     href={item.href}
-                    className={`px-3 py-1.5 rounded-md text-sm transition-colors ${
+                    className={`px-3 py-1.5 rounded-md text-[16px] transition-colors ${
                       isActive
-                        ? 'text-white bg-zinc-800/60 font-semibold'
+                        ? 'text-white bg-zinc-800/60'
                         : 'text-[#a1a1aa] hover:text-[#f4f4f5] hover:bg-zinc-800/30'
                     }`}
                   >
