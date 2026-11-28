@@ -122,7 +122,6 @@ export const SkillsSection: React.FC = () => {
   return (
     <section id="skills" className="w-full">
       <SectionHeading
-        number="04"
         title="Technologies"
         subtitle="Languages, frameworks, databases, and AI tooling applied in production."
       />

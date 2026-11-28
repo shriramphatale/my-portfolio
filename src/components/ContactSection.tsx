@@ -17,7 +17,6 @@ export const ContactSection: React.FC = () => {
   return (
     <section id="contact" className="w-full">
       <SectionHeading
-        number="06"
         title="Contact"
         subtitle="Open for full-stack engineering roles, technical inquiries, and project discussions."
       />

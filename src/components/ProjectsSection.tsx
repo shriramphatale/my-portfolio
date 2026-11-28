@@ -9,7 +9,6 @@ export const ProjectsSection: React.FC = () => {
   return (
     <section id="projects" className="w-full">
       <SectionHeading
-        number="03"
         title="Selected Projects"
         subtitle="Full-stack web applications, vector search architectures, and AI product implementations."
       />

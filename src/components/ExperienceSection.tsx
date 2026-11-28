@@ -9,7 +9,6 @@ export const ExperienceSection: React.FC = () => {
   return (
     <section id="experience" className="w-full">
       <SectionHeading
-        number="02"
         title="Experience"
         subtitle="Work history, production systems engineering, and technical problem-solving."
       />
