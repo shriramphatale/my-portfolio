@@ -1,7 +1,6 @@
 import React from 'react';
 
 interface SectionHeadingProps {
-  number: string;
   title: string;
   subtitle?: string;
   badge?: string;
@@ -9,7 +8,6 @@ interface SectionHeadingProps {
 }
 
 export const SectionHeading: React.FC<SectionHeadingProps> = ({
-  number,
   title,
   badge,
   id,
