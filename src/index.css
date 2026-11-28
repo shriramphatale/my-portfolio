@@ -1,18 +1,10 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: 'OCR A Tribute';
-  src: url('/fonts/OCR-A-Tribute-W01-Regular.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
 @theme {
-  --font-sans: 'OCR A Tribute', monospace, sans-serif;
-  --font-mono: 'OCR A Tribute', monospace, ui-monospace;
-  --default-font-family: 'OCR A Tribute', monospace, sans-serif;
-  --default-mono-font-family: 'OCR A Tribute', monospace, ui-monospace;
+  --font-sans: 'Patrick Hand', cursive, sans-serif;
+  --font-mono: 'Patrick Hand', cursive, sans-serif;
+  --default-font-family: 'Patrick Hand', cursive, sans-serif;
+  --default-mono-font-family: 'Patrick Hand', cursive, sans-serif;
 }
 
 @layer base {
@@ -42,7 +34,7 @@
   }
 
   *, ::before, ::after {
-    font-family: 'OCR A Tribute', monospace, sans-serif;
+    font-family: 'Patrick Hand', cursive, sans-serif;
   }
 
   /* Global smooth transition between themes */
@@ -72,14 +64,14 @@
 
   html {
     scroll-behavior: smooth;
-    font-family: 'OCR A Tribute', monospace, sans-serif;
+    font-family: 'Patrick Hand', cursive, sans-serif;
     background-color: var(--bg-page);
     color: var(--text-primary);
     overflow-x: hidden;
   }
 
   body {
-    font-family: 'OCR A Tribute', monospace, sans-serif;
+    font-family: 'Patrick Hand', cursive, sans-serif;
     background-color: var(--bg-page);
     color: var(--text-primary);
     overflow-x: hidden;
@@ -87,7 +79,7 @@
   }
 
   h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, code, pre, .font-mono, .font-sans {
-    font-family: 'OCR A Tribute', monospace, sans-serif;
+    font-family: 'Patrick Hand', cursive, sans-serif;
   }
 }
 
@@ -343,7 +335,7 @@ html.light ::-webkit-scrollbar-thumb:hover {
   color: #f4f4f5 !important;
   border: 1px solid #27272a !important;
   border-radius: 6px !important;
-  font-family: 'OCR A Tribute', monospace !important;
+  font-family: 'Patrick Hand', cursive, sans-serif !important;
   font-size: 11px !important;
   padding: 4px 8px !important;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6) !important;
